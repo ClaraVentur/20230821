@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="Javascript">
+
+        var jogadores, v, t, i, k;
+
+        do
+        {
+            do
+            {
+                do
+                {
+                    jogadores = parseFloat(window.prompt("Quantas pessoas vão jogar? (de 2 a 5) ","0"));
+                }
+                while(isNaN(jogadores));
+            }
+            while(jogadores>5);
+        }
+        while(jogadores<2);
+
+        j = 1;
+        i = 1;
+        k = 100;
+
+        do
+        {do
+        {
+            do
+            {
+                do
+                {
+                    do
+                    {
+                    t = parseFloat(window.prompt("Jogador "+ j +", digite um número entre "+ i +" e "+ k +":"));
+                    }
+                    while(isNaN(t));
+                }
+                while(t <= i);
+            }
+            while(t >= k); 
+        j++;
+        if(t >= v)
+        {
+            k = t;
+        }
+        else
+        {
+            if(t <= v)
+            {
+                i = t;
+            }
+        }
+    }
+        while(j <= jogadores)
+}while(v != t)
+
+    </script>
+</body>
+</html>
